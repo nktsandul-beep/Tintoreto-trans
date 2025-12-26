@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TINTORETO-TRANS — О компании</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="translations.js" defer></script>
+</head>
+<body>
+
+<header class="header">
+  <div class="container header-inner">
+    <div class="lang-switcher">
+      <button class="lang-btn-current" id="lang-current">
+        <span id="lang-current-text">RU</span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div class="lang-dropdown" id="lang-dropdown">
+        <button class="lang-option" data-lang="ru">RU</button>
+        <button class="lang-option" data-lang="en">EN</button>
+        <button class="lang-option" data-lang="es">ES</button>
+        <button class="lang-option" data-lang="ro">RO</button>
+      </div>
+    </div>
+
+    <a href="Index.html" class="logo">TINTORETO-TRANS</a>
+
+    <div class="header-right">
+      <div class="header-messengers">
+        <a href="https://wa.me/37367187777" class="messenger-btn" title="WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="#" class="messenger-btn" title="Telegram">
+          <i class="fa-brands fa-telegram"></i>
+        </a>
+      </div>
+
+      <nav class="nav">
+        <a href="Index.html" data-translate="nav-home">Главная</a>
+        <a href="About.html" class="active" data-translate="nav-about">О нас</a>
+        <a href="Contacts.html" data-translate="nav-contacts">Контакты</a>
+      </nav>
+    </div>
+
+    <div class="burger" onclick="document.body.classList.toggle('menu-open')">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+
+  <div class="mobile-menu">
+    <a href="Index.html" data-translate="nav-home">Главная</a>
+    <a href="About.html" class="active" data-translate="nav-about">О нас</a>
+    <a href="Contacts.html" data-translate="nav-contacts">Контакты</a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="about-hero-banner">
+    <div class="about-hero-image-wrapper">
+      <video class="about-hero-video" autoplay muted loop playsinline preload="auto" poster="Images/about-photo.jpg">
+        <source src="./Images/about-video.mp4" type="video/mp4">
+        <source src="./Images/about-video.webm" type="video/webm">
+        Ваш браузер не поддерживает видео.
+      </video>
+      <img src="Images/about-photo.jpg" alt="TINTORETO-TRANS" class="about-hero-image" id="about-hero-fallback" style="display: none;">
+      <div class="about-hero-overlay"></div>
+    </div>
+    <div class="container">
+      <div class="about-hero-content">
+        <h1 data-translate="about-title">О компании TINTORETO-TRANS</h1>
+        <p data-translate="about-subtitle">Более 24 лет профессионального опыта в сфере международных грузоперевозок.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about-content">
+  <div class="container">
+    <h2 data-translate="about-who">Кто мы</h2>
+
+    <p data-translate="about-text-1">
+      TINTORETO-TRANS была основана в 2001 году. Основным направлением деятельности компании являются
+      международные грузоперевозки автомобилями Euro 6. Все автомобили отвечают современным европейским требованиям
+      и оснащены мобильной связью.
+    </p>
+
+    <p data-translate="about-text-2">
+      TINTORETO-TRANS — это команда профессионалов высокого уровня с огромным опытом работы в области
+      грузоперевозок. Большинство наших специалистов являются обладателями профессиональных сертификатов по различным
+      направлениям транспортного бизнеса.
+    </p>
+
+    <div class="why-grid" style="margin-top: 50px;">
+      <div class="why-card fade-up">
+        <i class="fa-solid fa-users"></i>
+        <h3 data-translate="about-team">Профессиональная команда</h3>
+        <p data-translate="about-team-desc">Наши сотрудники разрабатывают оптимальные маршруты, консультируют по документации и контролируют весь процесс доставки.</p>
+      </div>
+
+      <div class="why-card fade-up">
+        <i class="fa-solid fa-chart-line"></i>
+        <h3 data-translate="about-efficiency">Эффективность</h3>
+        <p data-translate="about-efficiency-desc">Запрос клиента реализуется в кратчайшие сроки благодаря высокой компетентности и слаженной работе персонала.</p>
+      </div>
+
+      <div class="why-card fade-up">
+        <i class="fa-solid fa-handshake"></i>
+        <h3 data-translate="about-partnership">Партнёрство</h3>
+        <p data-translate="about-partnership-desc">Мы работаем как единая команда и обеспечиваем сотрудникам условия для профессионального роста.</p>
+      </div>
+
+      <div class="why-card fade-up">
+        <i class="fa-solid fa-globe"></i>
+        <h3 data-translate="about-global">Международный уровень</h3>
+        <p data-translate="about-global-desc">Мы обеспечиваем обмен грузами между промышленными и торговыми предприятиями по всей Европе.</p>
+      </div>
+    </div>
+
+    <h2 style="margin-top: 60px;" data-translate="about-standards">Наши стандарты</h2>
+
+    <p data-translate="about-standards-text-1">
+      TINTORETO-TRANS — один из лидеров молдавского рынка грузоперевозок. Мы предоставляем полный спектр услуг
+      транспортировки грузов и сопутствующего сервиса, выдерживая мировые стандарты качества.
+    </p>
+
+    <p data-translate="about-standards-text-2">
+      Компания предлагает комплексные транспортные решения, ориентированные на потребности клиентов, опираясь
+      на человеческий и технический потенциал.
+    </p>
+
+    <p data-translate="about-standards-text-3">
+      Мы постоянно развиваем новые направления, улучшаем аналитические и технические процессы и расширяем партнёрскую
+      сеть, чтобы предоставлять лучшие условия нашим клиентам.
+    </p>
+
+    <div class="stats fade-up" style="margin-top: 50px;">
+      <div class="stat-item">
+        <div class="stat-number">24+</div>
+        <div class="stat-label" data-translate="stat-years">лет на рынке</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">35+</div>
+        <div class="stat-label" data-translate="stat-vehicles">собственных машин</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">15+</div>
+        <div class="stat-label" data-translate="stat-countries">стран</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">1000+</div>
+        <div class="stat-label" data-translate="stat-trips">рейсов в год</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<script>
+  const animatedAbout = document.querySelectorAll('.fade-up');
+  const observerAbout = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold: 0.1 });
+  animatedAbout.forEach(el => observerAbout.observe(el));
+
+  // Video fallback handling
+  const aboutHeroVideo = document.querySelector('.about-hero-video');
+  const aboutHeroFallback = document.getElementById('about-hero-fallback');
+  
+  if (aboutHeroVideo && aboutHeroFallback) {
+    aboutHeroVideo.addEventListener('error', function() {
+      console.log('Видео не загрузилось, показываем изображение');
+      if (aboutHeroFallback) {
+        aboutHeroFallback.style.display = 'block';
+        aboutHeroVideo.style.display = 'none';
+      }
+    });
+    
+    // Проверка, загрузилось ли видео
+    aboutHeroVideo.addEventListener('loadeddata', function() {
+      console.log('Видео загружено успешно');
+    });
+    
+    // Попытка воспроизвести видео
+    aboutHeroVideo.play().catch(function(error) {
+      console.log('Ошибка воспроизведения видео:', error);
+      if (aboutHeroFallback) {
+        aboutHeroFallback.style.display = 'block';
+        aboutHeroVideo.style.display = 'none';
+      }
+    });
+  }
+</script>
+
+</body>
+</html>

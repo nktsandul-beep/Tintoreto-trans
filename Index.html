@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TINTORETO-TRANS — Международные перевозки по Европе и СНГ</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="translations.js" defer></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("nH8SMwqmxwJGRXoIS");
+    })();
+  </script>
+</head>
+<body>
+
+<header class="header">
+  <div class="container header-inner">
+    <div class="lang-switcher">
+      <button class="lang-btn-current" id="lang-current">
+        <span id="lang-current-text">RU</span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div class="lang-dropdown" id="lang-dropdown">
+        <button class="lang-option" data-lang="ru">RU</button>
+        <button class="lang-option" data-lang="en">EN</button>
+        <button class="lang-option" data-lang="es">ES</button>
+        <button class="lang-option" data-lang="ro">RO</button>
+      </div>
+    </div>
+
+    <a href="Index.html" class="logo">TINTORETO-TRANS</a>
+
+    <div class="header-right">
+      <div class="header-messengers">
+        <a href="https://wa.me/37367187777" class="messenger-btn" title="WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="#" class="messenger-btn" title="Telegram">
+          <i class="fa-brands fa-telegram"></i>
+        </a>
+      </div>
+
+      <nav class="nav">
+        <a href="Index.html" class="active" data-translate="nav-home">Главная</a>
+        <a href="About.html" data-translate="nav-about">О нас</a>
+        <a href="Contacts.html" data-translate="nav-contacts">Контакты</a>
+      </nav>
+    </div>
+
+    <div class="burger" onclick="document.body.classList.toggle('menu-open')">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+
+  <div class="mobile-menu">
+    <a href="Index.html" class="active" data-translate="nav-home">Главная</a>
+    <a href="About.html" data-translate="nav-about">О нас</a>
+    <a href="Contacts.html" data-translate="nav-contacts">Контакты</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-banner">
+    <div class="hero-image-wrapper">
+      <!-- Замените "hero-video.mp4" на имя вашего видеофайла из папки Images/ -->
+      <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="Images/main-photo.png">
+        <source src="./Images/hero-video.mp4" type="video/mp4">
+        <source src="./Images/hero-video.webm" type="video/webm">
+        Ваш браузер не поддерживает видео.
+      </video>
+      <!-- Fallback изображение (показывается если видео не загрузилось) -->
+      <img src="Images/main-photo.png" alt="TINTORETO-TRANS" class="hero-image" id="hero-fallback" style="display: none;">
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="container">
+      <div class="hero-content">
+        <h1 data-translate="hero-title">Международные перевозки по Европе и СНГ</h1>
+        <div class="hero-buttons">
+          <a href="#form" class="btn">
+            <i class="fa-solid fa-calculator"></i>
+            <span data-translate="btn-calculate">Рассчитать стоимость</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="section">
+  <div class="container">
+    <h2 class="section-title" data-translate="services-title">Наши услуги</h2>
+    <p class="section-subtitle" data-translate="services-subtitle">Полный спектр транспортно-логистических услуг для вашего бизнеса</p>
+
+    <div class="services-grid">
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <i class="fa-solid fa-route"></i>
+        </div>
+        <h3 data-translate="service-international">Международные перевозки</h3>
+        <p data-translate="service-international-desc">FTL перевозки по всей Европе и странам СНГ. Полный контроль маршрута и сроков доставки.</p>
+        <a href="#form" class="btn btn-secondary" data-translate="btn-request-quote">Запросить расчёт</a>
+      </div>
+
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <i class="fa-solid fa-box"></i>
+        </div>
+        <h3 data-translate="service-collective">Сборные грузы</h3>
+        <p data-translate="service-collective-desc">Экономичные решения для небольших партий грузов с консолидацией отправлений.</p>
+        <a href="#form" class="btn btn-secondary" data-translate="btn-request-quote">Запросить расчёт</a>
+      </div>
+
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <i class="fa-solid fa-file-lines"></i>
+        </div>
+        <h3 data-translate="service-documents">Таможенное сопровождение</h3>
+        <p data-translate="service-documents-desc">Полное оформление документов и таможенное декларирование грузов.</p>
+        <a href="#form" class="btn btn-secondary" data-translate="btn-request-quote">Запросить расчёт</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="geography" class="section geography">
+  <div class="container">
+    <div class="geography-text">
+      <h2 class="section-title" data-translate="geography-title">География перевозок</h2>
+      <p class="geography-description" data-translate="geography-desc">
+        Покрываем основные логистические маршруты Европы и стран СНГ
+      </p>
+    </div>
+    
+    <div class="geography-map-container">
+      <div class="geography-video-wrapper">
+        <!-- Замените "geography-video.mp4" на имя вашего видеофайла из папки Images/ -->
+        <video class="geography-video" autoplay muted loop playsinline preload="auto" poster="Images/main-photo.png">
+          <source src="./Images/geography-video.mp4" type="video/mp4">
+          <source src="./Images/geography-video.webm" type="video/webm">
+          Ваш браузер не поддерживает видео.
+        </video>
+        <div class="geography-video-overlay"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="why-us" class="section why-us">
+  <div class="container">
+    <h2 class="section-title" data-translate="why-title">Почему выбирают нас</h2>
+    <p class="section-subtitle" data-translate="why-subtitle">Надёжность, скорость и профессионализм без компромиссов</p>
+
+    <div class="why-grid">
+      <div class="why-card fade-up">
+        <i class="fa-solid fa-headset"></i>
+        <h3 data-translate="why-24/7">24/7 на связи</h3>
+        <p data-translate="why-24/7-desc">Круглосуточная поддержка и мониторинг груза. Всегда на связи.</p>
+      </div>
+
+      <div class="why-card fade-up">
+        <i class="fa-solid fa-truck"></i>
+        <h3 data-translate="why-transport">Собственный транспорт</h3>
+        <p data-translate="why-transport-desc">35+ собственных машин в автопарке. Проверенные водители и техника.</p>
+      </div>
+
+      <div class="why-card fade-up">
+        <i class="fa-solid fa-shield-halved"></i>
+        <h3 data-translate="why-insurance">Страхование грузов</h3>
+        <p data-translate="why-insurance-desc">Полное страхование на всех этапах перевозки. Ваш груз под защитой.</p>
+      </div>
+
+      <div class="why-card fade-up">
+        <i class="fa-solid fa-camera"></i>
+        <h3 data-translate="why-photos">Фото-отчёты</h3>
+        <p data-translate="why-photos-desc">Документирование погрузки и выгрузки. Прозрачность на каждом этапе.</p>
+      </div>
+
+      <div class="why-card fade-up">
+        <i class="fa-solid fa-clock"></i>
+        <h3 data-translate="why-deadlines">Чёткие сроки</h3>
+        <p data-translate="why-deadlines-desc">Соблюдение сроков доставки. Без задержек и «завтраков».</p>
+      </div>
+
+      <div class="why-card fade-up">
+        <i class="fa-solid fa-chart-line"></i>
+        <h3 data-translate="why-analytics">Опыт и масштаб</h3>
+        <p data-translate="why-analytics-desc">24 года на рынке. Тысячи успешных рейсов по всей Европе.</p>
+      </div>
+    </div>
+
+    <div class="stats fade-up">
+      <div class="stat-item">
+        <div class="stat-number">24+</div>
+        <div class="stat-label" data-translate="stat-years">лет на рынке</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">35+</div>
+        <div class="stat-label" data-translate="stat-vehicles">собственных машин</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">15+</div>
+        <div class="stat-label" data-translate="stat-countries">стран</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">1000+</div>
+        <div class="stat-label" data-translate="stat-trips">рейсов в год</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how-it-works" class="section how-it-works">
+  <div class="container">
+    <h2 class="section-title" data-translate="how-title">Как мы работаем</h2>
+    <p class="section-subtitle" data-translate="how-subtitle">Простой и прозрачный процесс от заявки до доставки</p>
+
+    <div class="steps">
+      <div class="step fade-up">
+        <div class="step-number">1</div>
+        <h3 data-translate="step-1">Заявка</h3>
+        <p data-translate="step-1-desc">Оставляете заявку с параметрами груза: маршрут, вес, габариты, тип.</p>
+      </div>
+
+      <div class="step fade-up">
+        <div class="step-number">2</div>
+        <h3 data-translate="step-2">Расчёт</h3>
+        <p data-translate="step-2-desc">Рассчитываем стоимость и сроки доставки. Подтверждаем детали.</p>
+      </div>
+
+      <div class="step fade-up">
+        <div class="step-number">3</div>
+        <h3 data-translate="step-3">Погрузка</h3>
+        <p data-translate="step-3-desc">Оформляем документы, загружаем груз, отправляем в путь с GPS-мониторингом.</p>
+      </div>
+
+      <div class="step fade-up">
+        <div class="step-number">4</div>
+        <h3 data-translate="step-4">Доставка</h3>
+        <p data-translate="step-4-desc">Доставляем груз в срок. Передаём документы и получаем подтверждение.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="form" class="section contact-form-section">
+  <div class="container">
+    <h2 class="section-title" data-translate="form-title">Получить расчёт</h2>
+    <p class="section-subtitle" data-translate="form-subtitle">Заполните форму, и мы свяжемся с вами в течение 15 минут</p>
+
+    <div class="form-container">
+      <form class="contact-form" action="send-email.php" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name" data-translate="form-name">Ваше имя</label>
+            <input type="text" id="name" name="name" data-translate="form-name-placeholder" placeholder="Иван Иванов" required>
+          </div>
+          <div class="form-group">
+            <label for="email" data-translate="form-email">Email</label>
+            <input type="email" id="email" name="email" data-translate="form-email-placeholder" placeholder="ivan@example.com" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="from" data-translate="form-from">Откуда</label>
+            <input type="text" id="from" name="from" data-translate="form-from-placeholder" placeholder="Город отправления" required>
+          </div>
+          <div class="form-group">
+            <label for="to" data-translate="form-to">Куда</label>
+            <input type="text" id="to" name="to" data-translate="form-to-placeholder" placeholder="Город назначения" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="cargo-type">Тип груза</label>
+            <select id="cargo-type" name="cargo-type" required>
+              <option value="">Выберите тип</option>
+              <option value="ftl">Полная загрузка (FTL)</option>
+              <option value="ltl">Сборный груз (LTL)</option>
+              <option value="refrigerated">Рефрижератор</option>
+              <option value="other">Другое</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="weight">Вес (кг)</label>
+            <input type="number" id="weight" name="weight" placeholder="Укажите вес" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="phone" data-translate="form-phone">Телефон / WhatsApp / Telegram</label>
+          <input type="tel" id="phone" name="phone" data-translate="form-phone-placeholder" placeholder="+373 693 05 060" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message" data-translate="form-message">Дополнительная информация</label>
+          <textarea id="message" name="message" data-translate="form-message-placeholder" placeholder="Габариты, особые требования и т.д."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-send">
+          <i class="fa-solid fa-paper-plane"></i>
+          <span data-translate="form-submit">Получить расчёт за 15 минут</span>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+<script>
+  const items = document.querySelectorAll('.fade-up');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold: 0.1 });
+  items.forEach(i => observer.observe(i));
+
+  // Video fallback handling
+  const heroVideo = document.querySelector('.hero-video');
+  const heroFallback = document.getElementById('hero-fallback');
+  
+  if (heroVideo) {
+    heroVideo.addEventListener('error', function() {
+      console.log('Видео не загрузилось, показываем изображение');
+      if (heroFallback) {
+        heroFallback.style.display = 'block';
+        heroVideo.style.display = 'none';
+      }
+    });
+    
+    // Проверка, загрузилось ли видео
+    heroVideo.addEventListener('loadeddata', function() {
+      console.log('Видео загружено успешно');
+    });
+    
+    // Попытка воспроизвести видео
+    heroVideo.play().catch(function(error) {
+      console.log('Ошибка воспроизведения видео:', error);
+      if (heroFallback) {
+        heroFallback.style.display = 'block';
+        heroVideo.style.display = 'none';
+      }
+    });
+  }
+
+  // Form submission with EmailJS
+  document.querySelector('.contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const form = this;
+    const submitButton = form.querySelector('button[type="submit"]');
+    const originalButtonText = submitButton.innerHTML;
+    
+    // Показываем загрузку
+    submitButton.disabled = true;
+    submitButton.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Отправка...';
+    
+    // Подготовка данных для EmailJS
+    const templateParams = {
+      from_name: form.querySelector('[name="name"]')?.value || '',
+      from_email: form.querySelector('[name="email"]')?.value || '',
+      phone: form.querySelector('[name="phone"]')?.value || '',
+      from_location: form.querySelector('[name="from"]')?.value || '',
+      to_location: form.querySelector('[name="to"]')?.value || '',
+      cargo_type: form.querySelector('[name="cargo-type"]')?.value || '',
+      weight: form.querySelector('[name="weight"]')?.value || '',
+      message: form.querySelector('[name="message"]')?.value || ''
+    };
+    
+    // Отправка через EmailJS
+    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+      .then(function(response) {
+        const lang = localStorage.getItem('preferred-language') || 'ru';
+        const successMessage = translations[lang] && translations[lang]['form-success'] 
+          ? translations[lang]['form-success'] 
+          : 'Спасибо за сообщение! Мы свяжемся с вами в ближайшее время.';
+        
+        alert(successMessage);
+        form.reset();
+        submitButton.disabled = false;
+        submitButton.innerHTML = originalButtonText;
+      }, function(error) {
+        console.error('EmailJS Error:', error);
+        alert('Ошибка при отправке. Попробуйте позже или свяжитесь с нами по телефону.');
+        submitButton.disabled = false;
+        submitButton.innerHTML = originalButtonText;
+      });
+  });
+</script>
+
+</body>
+</html>
